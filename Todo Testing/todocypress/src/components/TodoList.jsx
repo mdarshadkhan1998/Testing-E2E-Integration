@@ -2,10 +2,10 @@ import React from "react";
 
 const TodoList = ({ todos = [] }) => {
   return (
-    <div>
+    <div data-testid="todolist">
       {todos.map((todo) => (
         <li key={todo.id}>
-          <input type="checkbox" value={todo.isCompleted} />
+          <input type="checkbox" data-testid="todocheckbox" value={todo.isCompleted} />
           <span>{todo.value}</span>
         </li>
       ))}

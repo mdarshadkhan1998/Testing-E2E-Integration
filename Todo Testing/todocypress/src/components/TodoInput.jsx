@@ -8,12 +8,16 @@ const TodoInput = ({ value, handleChange, handleSubmit }) => {
   return (
     <form onSubmit={submit}>
       <input 
+        // autoFocus
         type="text" 
         value={value} 
         onChange={handleChange} 
-        data-testid="todo-input"
+        data-testid="todoinput"
+        className="todo-input"
+        autoFocus
+        id="todoinput"
       />
-      <button type="submit">Add</button>
+      <button data-testid='todobutton' type="submit">Add</button>
     </form>
   );
 };
